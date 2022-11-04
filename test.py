@@ -14,7 +14,7 @@ def echo(update, context):
 
 def main():
 
-    TOKEN = '5604141585:AAFXID3BI7DdaHupDQQhzUF-GBuqe1KxK0U'
+    TOKEN = os.environ.get("TOKEN")
     APP_NAME = 'https://pythonsiut.herokuapp.com/'
 
     updater = Updater(TOKEN, use_context=True)
