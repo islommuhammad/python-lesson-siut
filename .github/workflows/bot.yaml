@@ -1,4 +1,7 @@
 name: "Github Actions Test"
+env:
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID  }}
 
 on:
   push:
@@ -13,6 +16,4 @@ jobs:
       - run: pip install python-telegram-bot
       - name: Run python script
         run: python test.py
-        env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID  }}
+        
