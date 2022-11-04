@@ -18,7 +18,7 @@ def main():
     APP_NAME = 'https://pythonsiut.herokuapp.com/'
 
     updater = Updater(TOKEN, use_context=True)
-
+    updater.bot.send_message(chat_id =-321996347,  text="Salom testing")
     dp = updater.dispatcher
     
     dp.add_handler(CommandHandler("start", start))
