@@ -25,8 +25,8 @@ def main():
 
     dp.add_handler(MessageHandler(Filters.text, echo))
 
-    updater.start_webhook(listen="0.0.0.0", port=PORT, url_path = TOKEN, webhook_url=APP_NAME+ TOKEN)
-    updater.idle()
+    # updater.start_webhook(listen="0.0.0.0", port=PORT, url_path = TOKEN, webhook_url=APP_NAME+ TOKEN)
+    # updater.idle()
 
 if __name__ == '__main__':
     main()
