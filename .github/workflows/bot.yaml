@@ -1,0 +1,19 @@
+ame: "Github Actions Test"
+
+on:
+  push:
+  schedule:
+    - cron: '* * * * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+      - run: pip install 
+      - name: Run python script
+        run: python test.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID  }}
