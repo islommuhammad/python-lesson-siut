@@ -1,7 +1,7 @@
 name: "Github Actions Test"
 
 on:
-  #push:
+  push:
   schedule:
     - cron: '11 7 * * *'
     - timezone: 'Asia/Samarkand'

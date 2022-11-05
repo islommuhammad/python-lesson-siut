@@ -1,9 +1,10 @@
 import os 
-
+from datetime import datetime
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 PORT = int(os.environ.get('PORT', '8443'))
-
+now = datetime.now()
+strNow = now.strftime("%d/%m/%Y %H:%M:%S")
 
 def start(update, context):
     update.message.reply_text('Hi!')
@@ -18,7 +19,7 @@ def main():
     APP_NAME = 'https://pythonsiut.herokuapp.com/'
 
     updater = Updater(TOKEN, use_context=True)
-    updater.bot.send_message(chat_id =-321996347,  text="Salom testing")
+    updater.bot.send_message(chat_id =-321996347,  text="Salom testing hozir "+strNow)
     dp = updater.dispatcher
     
     dp.add_handler(CommandHandler("start", start))
