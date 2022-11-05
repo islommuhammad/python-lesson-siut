@@ -3,7 +3,8 @@ name: "Github Actions Test"
 on:
   #push:
   schedule:
-    - cron: '4 2 * * *'
+    - cron: '11 7 * * *'
+    - timezone: 'Asia/Samarkand'
 
 jobs:
   bot:
