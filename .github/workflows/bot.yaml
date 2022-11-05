@@ -4,7 +4,6 @@ on:
   push:
   schedule:
     - cron: '11 7 * * *'
-    - timezone: 'Asia/Samarkand'
 
 jobs:
   bot:
