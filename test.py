@@ -34,7 +34,7 @@ def main():
     # updater.idle()
     # updater.start_polling()
     # updater.idle()
-schedule.every(1).minutes.do(main)
+schedule.every().day.at("05:05").do(main)
 while True:
     schedule.run_pending()
     time.sleep(1)
