@@ -2,7 +2,7 @@ name: "Github Actions Test"
 
 on:
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "* * * * *"
 
 jobs:
   bot:
