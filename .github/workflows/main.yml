@@ -1,0 +1,17 @@
+name: "Github Actions Test"
+
+on:
+  schedule:
+    - cron: '* * * * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: pip install python-telegram-bot
+      - name: Run python script
+        run: python test.py
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID  }}
